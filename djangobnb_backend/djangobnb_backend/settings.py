@@ -31,7 +31,7 @@ SITE_ID = 1
 if DEBUG:
     WEBSITE_URL = 'http://localhost:8000'
 else:
-    WEBSITE_URL = 'http://64.226.81.32:1337'
+    WEBSITE_URL = 'http://161.35.230.68:1337'
 
 CHANNEL_LAYERS = {
     'default': {
@@ -45,8 +45,8 @@ SIMPLE_JWT = {
     "ROTATE_REFRESH_TOKEN": False,
     "BLACKLIST_AFTER_ROTATION": False,
     "UPDATE_LAST_LOGIN": True,
-    "SIGNING_KEY": os.environ.get("JWT_SIGNING_KEY", "acomplexkey"),
-    "ALGORITHM": "HS512",
+    "SIGNING_KEY": "acomplexkey",
+    "ALOGRIGTHM": "HS512",
 }
 
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
@@ -66,29 +66,23 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:8000',
-    'http://localhost:3000',
-    'http://localhost:8000',
     'http://127.0.0.1:3000',
-    'http://64.226.81.32',
-    'http://64.226.81.32:1337'
+    'http://161.35.230.68',
+    'http://161.35.230.68:1337'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8000',
-    'http://localhost:3000',
-    'http://localhost:8000',
     'http://127.0.0.1:3000',
-    'http://64.226.81.32',
-    'http://64.226.81.32:1337'
+    'http://161.35.230.68',
+    'http://161.35.230.68:1337'
 ]
 
 CORS_ORIGINS_WHITELIST = [
     'http://127.0.0.1:8000',
-    'http://localhost:3000',
-    'http://localhost:8000',
     'http://127.0.0.1:3000',
-    'http://64.226.81.32',
-    'http://64.226.81.32:1337'
+    'http://161.35.230.68',
+    'http://161.35.230.68:1337'
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
